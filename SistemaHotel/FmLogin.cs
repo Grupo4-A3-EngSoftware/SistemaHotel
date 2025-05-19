@@ -22,6 +22,7 @@ namespace SistemaHotel
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // Aqui você pode adicionar a lógica de autenticação do usuário
             string usuario = "admin";
             string senha = "admin";
 

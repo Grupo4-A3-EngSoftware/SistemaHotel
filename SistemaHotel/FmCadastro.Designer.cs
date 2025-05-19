@@ -97,6 +97,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtsenha.Location = new System.Drawing.Point(607, 268);
             this.txtsenha.Name = "txtsenha";
+            this.txtsenha.PasswordChar = '*';
             this.txtsenha.Size = new System.Drawing.Size(265, 26);
             this.txtsenha.TabIndex = 4;
             // 
@@ -115,6 +116,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtsenhaconf.Location = new System.Drawing.Point(607, 385);
             this.txtsenhaconf.Name = "txtsenhaconf";
+            this.txtsenhaconf.PasswordChar = '*';
             this.txtsenhaconf.Size = new System.Drawing.Size(265, 26);
             this.txtsenhaconf.TabIndex = 5;
             // 
