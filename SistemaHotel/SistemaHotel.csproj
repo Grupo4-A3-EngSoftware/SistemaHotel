@@ -52,11 +52,11 @@
     <Compile Include="FmLogin.Designer.cs">
       <DependentUpon>FmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FmPrincipal.Designer.cs">
+      <DependentUpon>FmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="FmCadastro.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FmPrincipal.resx">
+      <DependentUpon>FmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmCadastro.resx">
       <DependentUpon>FmCadastro.cs</DependentUpon>

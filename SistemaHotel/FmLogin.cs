@@ -30,7 +30,7 @@ namespace SistemaHotel
             {
                 MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Aqui você pode abrir o formulário principal do sistema
-                Form1 formPrincipal = new Form1();
+                FmPrincipal formPrincipal = new FmPrincipal();
                 formPrincipal.Show();
                 this.Hide(); // Esconde o formulário de login
             }

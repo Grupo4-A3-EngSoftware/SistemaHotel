@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtsenhaconf = new System.Windows.Forms.TextBox();
             this.btnconta = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,12 +132,25 @@
             this.btnconta.Text = "Registrar conta";
             this.btnconta.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cliente",
+            "Funcionários"});
+            this.comboBox1.Location = new System.Drawing.Point(932, 162);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.Text = "Cliente";
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1153, 643);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnconta);
             this.Controls.Add(this.txtsenhaconf);
             this.Controls.Add(this.txtsenha);
@@ -166,5 +180,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtsenhaconf;
         private System.Windows.Forms.Button btnconta;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
