@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmCadastroHodped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmCadastroHodped.Designer.cs">
+      <DependentUpon>FmCadastroHodped.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmCadastroHodped.resx">
+      <DependentUpon>FmCadastroHodped.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>
     </EmbeddedResource>
