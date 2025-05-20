@@ -76,6 +76,7 @@
             this.btnHóspedes.TabIndex = 2;
             this.btnHóspedes.Text = "Hóspedes";
             this.btnHóspedes.UseVisualStyleBackColor = true;
+            this.btnHóspedes.Click += new System.EventHandler(this.btnHóspedes_Click);
             // 
             // FmPrincipal
             // 
@@ -85,6 +86,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

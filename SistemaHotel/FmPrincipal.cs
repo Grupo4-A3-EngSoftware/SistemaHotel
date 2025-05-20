@@ -16,5 +16,12 @@ namespace SistemaHotel
         {
             InitializeComponent();
         }
+
+        private void btnHóspedes_Click(object sender, EventArgs e)
+        {
+            // abre a tela do cadastro de hospedes
+            FmCadastroHodped cadastroHodped = new FmCadastroHodped();
+            cadastroHodped.Show();
+        }
     }
 }
