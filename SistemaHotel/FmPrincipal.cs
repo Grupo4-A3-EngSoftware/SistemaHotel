@@ -23,5 +23,19 @@ namespace SistemaHotel
             FmCadastroHodped cadastroHodped = new FmCadastroHodped();
             cadastroHodped.Show();
         }
+
+        private void CarregaReservasDoDia()
+        {
+            // Aqui você pode adicionar a lógica para carregar as reservas do dia
+            dtacheckin.Rows.Clear(); // Limpa as linhas existentes no DataGridView
+            // simula a adição de dados ao DataGridView
+            dtacheckin.Rows.Add("João", "quarto 101", "134265198709", "12/10/2023", "joão@gmail.com");
+
+        }
+
+        private void FmPrincipal_Load(object sender, EventArgs e)
+        {
+            CarregaReservasDoDia(); // Carrega as reservas do dia ao abrir o formulário
+        }
     }
 }

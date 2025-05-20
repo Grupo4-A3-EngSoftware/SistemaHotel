@@ -146,6 +146,7 @@
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.label1);
             this.Name = "FmCadastroHodped";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Hóspede";
             this.ResumeLayout(false);
             this.PerformLayout();
