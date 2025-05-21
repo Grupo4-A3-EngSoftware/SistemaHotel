@@ -24,5 +24,18 @@ namespace SistemaHotel
             string tipoUsuario = comboBox1.SelectedItem.ToString();
             MessageBox.Show("Tipo de usuário selecionado: " + tipoUsuario);
         }
+
+        private void btnconta_Click(object sender, EventArgs e)
+        {
+            if (txtsenhaCadastro.Text == txtconfirmaSenha.Text)
+            {
+                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Aqui você pode adicionar a lógica para salvar os dados do usuário no banco de dados ou em um arquivo
+            }
+            else
+            {
+                MessageBox.Show("As senhas não coincidem. Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtsenha = new System.Windows.Forms.TextBox();
+            this.txtsenhaCadastro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtsenhaconf = new System.Windows.Forms.TextBox();
+            this.txtconfirmaSenha = new System.Windows.Forms.TextBox();
             this.btnconta = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtusuarioCadastro = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,15 +85,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Crie uma senha";
             // 
-            // txtsenha
+            // txtsenhaCadastro
             // 
-            this.txtsenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtsenhaCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsenha.Location = new System.Drawing.Point(28, 185);
-            this.txtsenha.Name = "txtsenha";
-            this.txtsenha.PasswordChar = '*';
-            this.txtsenha.Size = new System.Drawing.Size(265, 26);
-            this.txtsenha.TabIndex = 3;
+            this.txtsenhaCadastro.Location = new System.Drawing.Point(28, 185);
+            this.txtsenhaCadastro.Name = "txtsenhaCadastro";
+            this.txtsenhaCadastro.PasswordChar = '*';
+            this.txtsenhaCadastro.Size = new System.Drawing.Size(265, 26);
+            this.txtsenhaCadastro.TabIndex = 3;
             // 
             // label4
             // 
@@ -101,15 +104,15 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Confirma senha";
             // 
-            // txtsenhaconf
+            // txtconfirmaSenha
             // 
-            this.txtsenhaconf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtconfirmaSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsenhaconf.Location = new System.Drawing.Point(29, 300);
-            this.txtsenhaconf.Name = "txtsenhaconf";
-            this.txtsenhaconf.PasswordChar = '*';
-            this.txtsenhaconf.Size = new System.Drawing.Size(265, 26);
-            this.txtsenhaconf.TabIndex = 4;
+            this.txtconfirmaSenha.Location = new System.Drawing.Point(29, 300);
+            this.txtconfirmaSenha.Name = "txtconfirmaSenha";
+            this.txtconfirmaSenha.PasswordChar = '*';
+            this.txtconfirmaSenha.Size = new System.Drawing.Size(265, 26);
+            this.txtconfirmaSenha.TabIndex = 4;
             // 
             // btnconta
             // 
@@ -121,6 +124,7 @@
             this.btnconta.TabIndex = 6;
             this.btnconta.Text = "Registrar conta";
             this.btnconta.UseVisualStyleBackColor = false;
+            this.btnconta.Click += new System.EventHandler(this.btnconta_Click);
             // 
             // comboBox1
             // 
@@ -145,12 +149,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Usuário";
             // 
-            // textBox1
+            // txtusuarioCadastro
             // 
-            this.textBox1.Location = new System.Drawing.Point(327, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtusuarioCadastro.Location = new System.Drawing.Point(327, 82);
+            this.txtusuarioCadastro.Name = "txtusuarioCadastro";
+            this.txtusuarioCadastro.Size = new System.Drawing.Size(233, 26);
+            this.txtusuarioCadastro.TabIndex = 2;
             // 
             // panel1
             // 
@@ -160,17 +164,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnconta);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtusuarioCadastro);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtsenha);
+            this.panel1.Controls.Add(this.txtsenhaCadastro);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtsenhaconf);
+            this.panel1.Controls.Add(this.txtconfirmaSenha);
             this.panel1.Location = new System.Drawing.Point(263, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(599, 351);
             this.panel1.TabIndex = 10;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Cadastro
             // 
@@ -187,6 +195,7 @@
             this.Text = "Cadastro";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,13 +205,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtsenha;
+        private System.Windows.Forms.TextBox txtsenhaCadastro;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtsenhaconf;
+        private System.Windows.Forms.TextBox txtconfirmaSenha;
         private System.Windows.Forms.Button btnconta;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtusuarioCadastro;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
