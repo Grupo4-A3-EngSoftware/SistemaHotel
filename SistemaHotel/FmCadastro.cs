@@ -17,6 +17,7 @@ namespace SistemaHotel
         {
             InitializeComponent();
             label1.BackColor = Color.Transparent;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void ComboBox1(object sender, EventArgs e)

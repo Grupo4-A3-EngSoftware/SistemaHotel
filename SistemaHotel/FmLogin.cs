@@ -18,6 +18,7 @@ namespace SistemaHotel
             this.FormBorderStyle = FormBorderStyle.Sizable; // Permite que o usuário redimensione manualmente
             user.BackColor = Color.Transparent; // Torna o fundo do label transparente
             senha.BackColor = Color.Transparent;
+            this.WindowState = FormWindowState.Maximized; // Abre o formulário maximizado
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
