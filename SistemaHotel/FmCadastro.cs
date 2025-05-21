@@ -16,5 +16,12 @@ namespace SistemaHotel
         {
             InitializeComponent();
         }
+
+        private void ComboBox1(object sender, EventArgs e)
+        {
+            // Aqui você pode adicionar a lógica para lidar com a seleção do ComboBox
+            string tipoUsuario = comboBox1.SelectedItem.ToString();
+            MessageBox.Show("Tipo de usuário selecionado: " + tipoUsuario);
+        }
     }
 }

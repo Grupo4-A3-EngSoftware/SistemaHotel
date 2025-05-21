@@ -49,7 +49,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(363, 416);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -82,7 +82,7 @@
             this.txtnome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtnome.Location = new System.Drawing.Point(405, 107);
-            this.txtnome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnome.Margin = new System.Windows.Forms.Padding(2);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(178, 20);
             this.txtnome.TabIndex = 3;
@@ -102,7 +102,7 @@
             this.txtsenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtsenha.Location = new System.Drawing.Point(405, 174);
-            this.txtsenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.PasswordChar = '*';
             this.txtsenha.Size = new System.Drawing.Size(178, 20);
@@ -123,7 +123,7 @@
             this.txtsenhaconf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtsenhaconf.Location = new System.Drawing.Point(405, 250);
-            this.txtsenhaconf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsenhaconf.Margin = new System.Windows.Forms.Padding(2);
             this.txtsenhaconf.Name = "txtsenhaconf";
             this.txtsenhaconf.PasswordChar = '*';
             this.txtsenhaconf.Size = new System.Drawing.Size(178, 20);
@@ -134,7 +134,7 @@
             this.btnconta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnconta.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnconta.Location = new System.Drawing.Point(511, 326);
-            this.btnconta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnconta.Margin = new System.Windows.Forms.Padding(2);
             this.btnconta.Name = "btnconta";
             this.btnconta.Size = new System.Drawing.Size(115, 27);
             this.btnconta.TabIndex = 6;
@@ -150,10 +150,11 @@
             "Cliente",
             "Funcionários"});
             this.comboBox1.Location = new System.Drawing.Point(621, 105);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(82, 21);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1);
             // 
             // Cadastro
             // 
@@ -171,7 +172,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
