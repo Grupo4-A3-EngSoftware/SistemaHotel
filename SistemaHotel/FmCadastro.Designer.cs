@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
@@ -39,41 +38,29 @@
             this.txtsenhaconf = new System.Windows.Forms.TextBox();
             this.btnconta = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(363, 416);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(401, 45);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(214, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.Size = new System.Drawing.Size(174, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Crie uma conta";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(402, 81);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(22, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.Size = new System.Drawing.Size(151, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Seu nome completo";
             // 
@@ -81,19 +68,17 @@
             // 
             this.txtnome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtnome.Location = new System.Drawing.Point(405, 107);
-            this.txtnome.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnome.Location = new System.Drawing.Point(27, 83);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(178, 20);
-            this.txtnome.TabIndex = 3;
+            this.txtnome.Size = new System.Drawing.Size(265, 26);
+            this.txtnome.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(402, 143);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(23, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Crie uma senha";
             // 
@@ -101,20 +86,18 @@
             // 
             this.txtsenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsenha.Location = new System.Drawing.Point(405, 174);
-            this.txtsenha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtsenha.Location = new System.Drawing.Point(28, 185);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.PasswordChar = '*';
-            this.txtsenha.Size = new System.Drawing.Size(178, 20);
-            this.txtsenha.TabIndex = 4;
+            this.txtsenha.Size = new System.Drawing.Size(265, 26);
+            this.txtsenha.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(402, 215);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(24, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(121, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Confirma senha";
             // 
@@ -122,21 +105,19 @@
             // 
             this.txtsenhaconf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsenhaconf.Location = new System.Drawing.Point(405, 250);
-            this.txtsenhaconf.Margin = new System.Windows.Forms.Padding(2);
+            this.txtsenhaconf.Location = new System.Drawing.Point(29, 300);
             this.txtsenhaconf.Name = "txtsenhaconf";
             this.txtsenhaconf.PasswordChar = '*';
-            this.txtsenhaconf.Size = new System.Drawing.Size(178, 20);
-            this.txtsenhaconf.TabIndex = 5;
+            this.txtsenhaconf.Size = new System.Drawing.Size(265, 26);
+            this.txtsenhaconf.TabIndex = 4;
             // 
             // btnconta
             // 
             this.btnconta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnconta.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnconta.Location = new System.Drawing.Point(511, 326);
-            this.btnconta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconta.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnconta.Location = new System.Drawing.Point(367, 292);
             this.btnconta.Name = "btnconta";
-            this.btnconta.Size = new System.Drawing.Size(115, 27);
+            this.btnconta.Size = new System.Drawing.Size(172, 42);
             this.btnconta.TabIndex = 6;
             this.btnconta.Text = "Registrar conta";
             this.btnconta.UseVisualStyleBackColor = false;
@@ -149,42 +130,68 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Cliente",
             "Funcionários"});
-            this.comboBox1.Location = new System.Drawing.Point(621, 105);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(327, 183);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(82, 21);
-            this.comboBox1.TabIndex = 7;
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(323, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Usuário";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(327, 82);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(233, 26);
+            this.textBox1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnconta);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtnome);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtsenha);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtsenhaconf);
+            this.panel1.Location = new System.Drawing.Point(263, 148);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(599, 351);
+            this.panel1.TabIndex = 10;
             // 
             // Cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(769, 418);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnconta);
-            this.Controls.Add(this.txtsenhaconf);
-            this.Controls.Add(this.txtsenha);
-            this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1154, 643);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnome;
@@ -194,5 +201,8 @@
         private System.Windows.Forms.TextBox txtsenhaconf;
         private System.Windows.Forms.Button btnconta;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

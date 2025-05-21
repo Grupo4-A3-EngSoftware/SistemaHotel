@@ -15,6 +15,7 @@ namespace SistemaHotel
         public Cadastro()
         {
             InitializeComponent();
+            label1.BackColor = Color.Transparent;
         }
 
         private void ComboBox1(object sender, EventArgs e)
