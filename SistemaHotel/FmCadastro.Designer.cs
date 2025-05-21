@@ -75,6 +75,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(265, 26);
             this.txtnome.TabIndex = 1;
+            this.txtnome.Validated += new System.EventHandler(this.txtnome_Validated);
             // 
             // label3
             // 

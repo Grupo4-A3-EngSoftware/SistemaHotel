@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography; // Para usar o SHA256
 
 namespace SistemaHotel
 {
@@ -35,6 +36,50 @@ namespace SistemaHotel
             else
             {
                 MessageBox.Show("As senhas não coincidem. Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtnome_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtnome.Text))
+            {
+                string senhaCriptografada = GerarHashSHA256(txtsenhaCadastro.Text); // Criptografa a senha
+                MessageBox.Show("Senha criptografada: " + senhaCriptografada); // Exibe a senha criptografada (apenas para fins de demonstração)
+                // Aqui você pode adicionar a lógica para salvar a senha criptografada no banco de dados ou em um arquivo
+                MessageBox.Show("O campo Nome é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtnome.Focus();
+            }
+            else
+            {
+                errorProvider1.SetError(txtnome, ""); // Limpa o erro se o campo estiver preenchido corretamente
+            }
+        }
+
+        private void txtusuarioCadastro_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtusuarioCadastro.Text))
+            {
+                MessageBox.Show("O campo Usuário é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtusuarioCadastro.Focus();
+            }
+            else
+            {
+                errorProvider1.SetError(txtusuarioCadastro, ""); // Limpa o erro se o campo estiver preenchido corretamente
+            }
+        }
+
+        private string GerarHashSHA256(string senha)
+        {
+            // Cria uma instância do SHA256 para criptografar a senha
+            using (var sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
             }
         }
     }
