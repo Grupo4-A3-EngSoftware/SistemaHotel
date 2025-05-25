@@ -39,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.btnsalvar = new System.Windows.Forms.Button();
+            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +78,7 @@
             this.txtendereco.Multiline = true;
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(456, 135);
-            this.txtendereco.TabIndex = 3;
+            this.txtendereco.TabIndex = 2;
             // 
             // panel1
             // 
@@ -111,7 +113,7 @@
             this.btnnovo.Location = new System.Drawing.Point(224, 622);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(116, 49);
-            this.btnnovo.TabIndex = 6;
+            this.btnnovo.TabIndex = 0;
             this.btnnovo.Text = "Novo";
             this.btnnovo.UseVisualStyleBackColor = true;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
@@ -131,17 +133,35 @@
             this.txtemail.Location = new System.Drawing.Point(678, 49);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(350, 26);
-            this.txtemail.TabIndex = 8;
+            this.txtemail.TabIndex = 3;
             // 
             // btnsalvar
             // 
             this.btnsalvar.Location = new System.Drawing.Point(404, 622);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(118, 49);
-            this.btnsalvar.TabIndex = 9;
+            this.btnsalvar.TabIndex = 5;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = true;
             this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
+            // 
+            // maskedTextBoxCPF
+            // 
+            this.maskedTextBoxCPF.Location = new System.Drawing.Point(678, 158);
+            this.maskedTextBoxCPF.Mask = "000.000.000-00";
+            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
+            this.maskedTextBoxCPF.Size = new System.Drawing.Size(350, 26);
+            this.maskedTextBoxCPF.TabIndex = 4;
+            this.maskedTextBoxCPF.ValidatingType = typeof(System.DateTime);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(678, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "CPF";
             // 
             // FmCadastroHodped
             // 
@@ -149,6 +169,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1299, 708);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.maskedTextBoxCPF);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label4);
@@ -182,5 +204,7 @@
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -32,12 +32,22 @@ namespace SistemaHotel
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cadastro salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             // Aqui você pode adicionar a lógica para salvar os dados do hóspede no banco de dados ou em um arquivo
             // Por enquanto, apenas desabilitamos os campos de texto
             txtnomehospede.Enabled = false;
             txtendereco.Enabled = false;
             txtemail.Enabled = false;
+            maskedTextBoxCPF.Enabled = false;
+
+            // Valida o CPF
+            string cpf = maskedTextBoxCPF.Text;
+            if (!CPFValidator.ValidarCPF(cpf))
+            {
+                MessageBox.Show("CPF inválido. Por favor, verifique e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Cadastro salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

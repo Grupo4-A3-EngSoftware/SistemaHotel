@@ -32,7 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnpagamento = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,14 +81,14 @@
             this.btnpagamento.Text = "Confirma pagamento";
             this.btnpagamento.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // label1
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(350, 314);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 26);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Metodo de pagamento:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(374, 317);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Metodo de pagamento";
             // 
             // FmGestaopagamentos
             // 
@@ -96,7 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1370, 707);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnpagamento);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
@@ -116,6 +116,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnpagamento;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
