@@ -46,6 +46,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.btngestaopagamentos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtacheckin)).BeginInit();
             this.panel2.SuspendLayout();
@@ -120,6 +121,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.btngestaopagamentos);
             this.panel2.Controls.Add(this.btnHóspedes);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
@@ -128,9 +130,9 @@
             // 
             // btnHóspedes
             // 
-            this.btnHóspedes.Location = new System.Drawing.Point(49, 35);
+            this.btnHóspedes.Location = new System.Drawing.Point(33, 35);
             this.btnHóspedes.Name = "btnHóspedes";
-            this.btnHóspedes.Size = new System.Drawing.Size(96, 37);
+            this.btnHóspedes.Size = new System.Drawing.Size(131, 51);
             this.btnHóspedes.TabIndex = 2;
             this.btnHóspedes.Text = "Hóspedes";
             this.btnHóspedes.UseVisualStyleBackColor = true;
@@ -220,6 +222,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Saidas agendas do dia (Check-out)";
             // 
+            // btngestaopagamentos
+            // 
+            this.btngestaopagamentos.Location = new System.Drawing.Point(33, 131);
+            this.btngestaopagamentos.Name = "btngestaopagamentos";
+            this.btngestaopagamentos.Size = new System.Drawing.Size(131, 59);
+            this.btngestaopagamentos.TabIndex = 2;
+            this.btngestaopagamentos.Text = "Gestão de Pagamentos";
+            this.btngestaopagamentos.UseVisualStyleBackColor = true;
+            this.btngestaopagamentos.Click += new System.EventHandler(this.btngestaopagamentos_Click);
+            // 
             // FmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -264,5 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btngestaopagamentos;
     }
 }

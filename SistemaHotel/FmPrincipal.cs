@@ -37,5 +37,11 @@ namespace SistemaHotel
         {
             CarregaReservasDoDia(); // Carrega as reservas do dia ao abrir o formulário
         }
+
+        private void btngestaopagamentos_Click(object sender, EventArgs e)
+        {
+            FmGestaopagamentos gestaopagamento = new FmGestaopagamentos();
+            gestaopagamento.ShowDialog(); // Abre o formulário de gestão de pagamentos como um diálogo modal
+        }
     }
 }
