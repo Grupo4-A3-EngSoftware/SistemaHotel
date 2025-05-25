@@ -15,7 +15,6 @@ namespace SistemaHotel
         public FmGestaopagamentos()
         {
             InitializeComponent();
-            textBox1.BackColor = Color.Transparent;
         }
     }
 }
