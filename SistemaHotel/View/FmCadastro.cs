@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography; // Para usar o SHA256
+using SistemaHotel.Controller_DAO;
+
+
 
 namespace SistemaHotel
 {
@@ -33,7 +36,15 @@ namespace SistemaHotel
             {
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Aqui você pode adicionar a lógica para salvar os dados do usuário no banco de dados ou em um arquivo
+                
+                string senha = txtsenhaCadastro.Text;
+                string usuario = txtusuarioCadastro.Text;
+                _02_NewCad_DAO cadastro = new _02_NewCad_DAO();
+                cadastro.AddAdm(usuario,senha);
+
+
             }
+
             else
             {
                 MessageBox.Show("As senhas não coincidem. Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -45,9 +56,6 @@ namespace SistemaHotel
             if (string.IsNullOrWhiteSpace(txtnome.Text))
             {
                 string senhaCriptografada = GerarHashSHA256(txtsenhaCadastro.Text); // Criptografa a senha
-                MessageBox.Show("Senha criptografada: " + senhaCriptografada); // Exibe a senha criptografada (apenas para fins de demonstração)
-                // Aqui você pode adicionar a lógica para salvar a senha criptografada no banco de dados ou em um arquivo
-                MessageBox.Show("O campo Nome é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtnome.Focus();
             }
             else
@@ -82,6 +90,16 @@ namespace SistemaHotel
                 }
                 return builder.ToString();
             }
+        }
+
+        private void txtusuarioCadastro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

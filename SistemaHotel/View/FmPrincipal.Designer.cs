@@ -36,6 +36,7 @@
             this.Entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btngestaopagamentos = new System.Windows.Forms.Button();
             this.btnHóspedes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.btngestaopagamentos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtacheckin)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,9 +59,10 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.dtacheckin);
-            this.panel1.Location = new System.Drawing.Point(273, 99);
+            this.panel1.Location = new System.Drawing.Point(182, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(864, 219);
+            this.panel1.Size = new System.Drawing.Size(576, 142);
             this.panel1.TabIndex = 0;
             // 
             // dtacheckin
@@ -74,11 +75,12 @@
             this.CPF,
             this.Entrada,
             this.Email});
-            this.dtacheckin.Location = new System.Drawing.Point(25, 17);
+            this.dtacheckin.Location = new System.Drawing.Point(17, 12);
+            this.dtacheckin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtacheckin.Name = "dtacheckin";
             this.dtacheckin.RowHeadersWidth = 62;
             this.dtacheckin.RowTemplate.Height = 28;
-            this.dtacheckin.Size = new System.Drawing.Size(813, 172);
+            this.dtacheckin.Size = new System.Drawing.Size(542, 112);
             this.dtacheckin.TabIndex = 0;
             // 
             // Nome
@@ -123,16 +125,29 @@
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
             this.panel2.Controls.Add(this.btngestaopagamentos);
             this.panel2.Controls.Add(this.btnHóspedes);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(8, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 686);
+            this.panel2.Size = new System.Drawing.Size(133, 446);
             this.panel2.TabIndex = 1;
+            // 
+            // btngestaopagamentos
+            // 
+            this.btngestaopagamentos.Location = new System.Drawing.Point(22, 85);
+            this.btngestaopagamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btngestaopagamentos.Name = "btngestaopagamentos";
+            this.btngestaopagamentos.Size = new System.Drawing.Size(87, 38);
+            this.btngestaopagamentos.TabIndex = 2;
+            this.btngestaopagamentos.Text = "Gestão de Pagamentos";
+            this.btngestaopagamentos.UseVisualStyleBackColor = true;
+            this.btngestaopagamentos.Click += new System.EventHandler(this.btngestaopagamentos_Click);
             // 
             // btnHóspedes
             // 
-            this.btnHóspedes.Location = new System.Drawing.Point(33, 35);
+            this.btnHóspedes.Location = new System.Drawing.Point(22, 23);
+            this.btnHóspedes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHóspedes.Name = "btnHóspedes";
-            this.btnHóspedes.Size = new System.Drawing.Size(131, 51);
+            this.btnHóspedes.Size = new System.Drawing.Size(87, 33);
             this.btnHóspedes.TabIndex = 2;
             this.btnHóspedes.Text = "Hóspedes";
             this.btnHóspedes.UseVisualStyleBackColor = true;
@@ -143,9 +158,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(534, 54);
+            this.label1.Location = new System.Drawing.Point(356, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 25);
+            this.label1.Size = new System.Drawing.Size(236, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Entradas agendas do dia (Check-in)";
             // 
@@ -154,9 +170,10 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel3.Controls.Add(this.dtacheckout);
-            this.panel3.Location = new System.Drawing.Point(273, 376);
+            this.panel3.Location = new System.Drawing.Point(182, 244);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(864, 219);
+            this.panel3.Size = new System.Drawing.Size(576, 142);
             this.panel3.TabIndex = 0;
             // 
             // dtacheckout
@@ -169,11 +186,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dtacheckout.Location = new System.Drawing.Point(25, 17);
+            this.dtacheckout.Location = new System.Drawing.Point(17, 11);
+            this.dtacheckout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtacheckout.Name = "dtacheckout";
             this.dtacheckout.RowHeadersWidth = 62;
             this.dtacheckout.RowTemplate.Height = 28;
-            this.dtacheckout.Size = new System.Drawing.Size(813, 172);
+            this.dtacheckout.Size = new System.Drawing.Size(542, 112);
             this.dtacheckout.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -216,32 +234,24 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(534, 337);
+            this.label2.Location = new System.Drawing.Point(356, 219);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(322, 25);
+            this.label2.Size = new System.Drawing.Size(231, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Saidas agendas do dia (Check-out)";
             // 
-            // btngestaopagamentos
-            // 
-            this.btngestaopagamentos.Location = new System.Drawing.Point(33, 131);
-            this.btngestaopagamentos.Name = "btngestaopagamentos";
-            this.btngestaopagamentos.Size = new System.Drawing.Size(131, 59);
-            this.btngestaopagamentos.TabIndex = 2;
-            this.btngestaopagamentos.Text = "Gestão de Pagamentos";
-            this.btngestaopagamentos.UseVisualStyleBackColor = true;
-            this.btngestaopagamentos.Click += new System.EventHandler(this.btngestaopagamentos_Click);
-            // 
             // FmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 710);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
