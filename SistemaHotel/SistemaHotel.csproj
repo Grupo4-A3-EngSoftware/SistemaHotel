@@ -102,6 +102,8 @@
     <Compile Include="Controller\CPFValidator.cs" />
     <Compile Include="Controller_DAO\01_Login_DAO.cs" />
     <Compile Include="Controller_DAO\02_NewCad_DAO.cs" />
+    <Compile Include="Model\Checkin.cs" />
+    <Compile Include="Model\Hospede.cs" />
     <Compile Include="Model\Login01.cs" />
     <Compile Include="View\FmCadastroHodped.cs">
       <SubType>Form</SubType>
