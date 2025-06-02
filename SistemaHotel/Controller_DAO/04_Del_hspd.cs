@@ -1,18 +1,18 @@
-﻿using SistemaHotel.Conexão_BD;
+﻿using MySql.Data.MySqlClient;
+using SistemaHotel.Conexão_BD;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 namespace SistemaHotel.Controller_DAO
 {
-    public class _02_NewCad_DAO
+    public class _04_Del_hspd
     {
         private MySqlConnection conexao;
 
-        public void AddAdm(string usuario, string senha)
+        public void Del_hspd(string id)
         {
             try
             {
@@ -21,20 +21,24 @@ namespace SistemaHotel.Controller_DAO
                 conexao.Open();
 
                 // Preparando o comando SQL
-                using (MySqlCommand comandoSql = new MySqlCommand("INSERT INTO tbl_login (usuario, senha) VALUES (@usuario, @senha)", conexao))
+                using (MySqlCommand comandoSql = new MySqlCommand("DELETE FROM tbl_hospede WHERE id_hospede = @Id", conexao))
                 {
                     // Substituindo os parâmetros
-                    comandoSql.Parameters.AddWithValue("@usuario", usuario);
-                    comandoSql.Parameters.AddWithValue("@senha", senha);
-
+                    comandoSql.Parameters.AddWithValue("@Id", id);
+                    
                     // Executando o comando
                     comandoSql.ExecuteNonQuery();
                 }
             }
+
+
+
+
+
             catch (Exception ex)
             {
                 // Tratar exceções de forma apropriada
-                Console.WriteLine($"Erro ao adicionar administrador: {ex.Message}");
+                Console.WriteLine($"Erro ao deletar {ex.Message}");
             }
             finally
             {
@@ -45,6 +49,11 @@ namespace SistemaHotel.Controller_DAO
                 }
             }
         }
+
+
+
+
+
 
 
 

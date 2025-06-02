@@ -12,16 +12,13 @@ namespace SistemaHotel.Model
         public string Cpf { get; set; }
         public string Endereço { get; set; }
         public string Email { get; set; }
-        public string Quarto { get; set; }
-
+    
         public Hospede(string nome, string cpf, string endereço, string email, string quarto)
         {
             Nome = nome;
             Cpf = cpf;
             Endereço = endereço;
-            Email = email;
-            Quarto = quarto;
+            Email = email;  
         }
-
     }
 }

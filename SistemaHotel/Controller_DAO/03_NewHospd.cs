@@ -5,27 +5,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using SistemaHotel.Model;
 
 namespace SistemaHotel.Controller_DAO
 {
-    public class _02_NewCad_DAO
+    public class _03_NewHospd
     {
         private MySqlConnection conexao;
-
-        public void AddAdm(string usuario, string senha)
+        public void AddHospd(string nome, string cpf, string endereço, string email)
         {
+
             try
             {
-                // Obtendo a conexão com o banco de dados
                 conexao = new ConnectionFactory().GetConnection();
                 conexao.Open();
 
-                // Preparando o comando SQL
-                using (MySqlCommand comandoSql = new MySqlCommand("INSERT INTO tbl_login (usuario, senha) VALUES (@usuario, @senha)", conexao))
+                using (MySqlCommand comandoSql = new MySqlCommand("INSERT INTO tbl_hospede (nome, cpf, endereço, email) VALUES (@nome, @cpf, @endereço, @email)", conexao))
                 {
                     // Substituindo os parâmetros
-                    comandoSql.Parameters.AddWithValue("@usuario", usuario);
-                    comandoSql.Parameters.AddWithValue("@senha", senha);
+                    comandoSql.Parameters.AddWithValue("@nome", nome);
+                    comandoSql.Parameters.AddWithValue("@cpf", cpf);
+                    comandoSql.Parameters.AddWithValue("@endereço", endereço);
+                    comandoSql.Parameters.AddWithValue("@email", email);
 
                     // Executando o comando
                     comandoSql.ExecuteNonQuery();
@@ -34,7 +35,7 @@ namespace SistemaHotel.Controller_DAO
             catch (Exception ex)
             {
                 // Tratar exceções de forma apropriada
-                Console.WriteLine($"Erro ao adicionar administrador: {ex.Message}");
+                Console.WriteLine($"Erro ao adicionar hospede: {ex.Message}");
             }
             finally
             {
@@ -45,8 +46,5 @@ namespace SistemaHotel.Controller_DAO
                 }
             }
         }
-
-
-
     }
 }
