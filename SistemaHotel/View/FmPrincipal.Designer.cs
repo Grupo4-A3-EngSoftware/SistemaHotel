@@ -35,6 +35,7 @@
             this.btngestaopagamentos = new System.Windows.Forms.Button();
             this.btnHóspedes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.butt_delete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtacheckin)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,6 +72,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.butt_delete);
             this.panel2.Controls.Add(this.but_Listar);
             this.panel2.Controls.Add(this.btngestaopagamentos);
             this.panel2.Controls.Add(this.btnHóspedes);
@@ -124,6 +126,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Entradas agendas do dia (Check-in)";
             // 
+            // butt_delete
+            // 
+            this.butt_delete.Location = new System.Drawing.Point(22, 382);
+            this.butt_delete.Name = "butt_delete";
+            this.butt_delete.Size = new System.Drawing.Size(87, 23);
+            this.butt_delete.TabIndex = 3;
+            this.butt_delete.Text = "Deletar";
+            this.butt_delete.UseVisualStyleBackColor = true;
+            this.butt_delete.Click += new System.EventHandler(this.butt_delete_Click);
+            // 
             // FmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btngestaopagamentos;
         private System.Windows.Forms.Button but_Listar;
+        private System.Windows.Forms.Button butt_delete;
     }
 }

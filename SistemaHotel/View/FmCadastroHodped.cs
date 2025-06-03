@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using SistemaHotel.Conexão_BD;
 using SistemaHotel.Controller_DAO;
+using SistemaHotel.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,8 +124,7 @@ namespace SistemaHotel
                                 
                             {   
                                 _04_Del_hspd dell = new _04_Del_hspd();
-                                dell.Del_hspd(id);                                             
-                                                                
+                                dell.Del_hspd(id);                                                       
                             }
 
                             // Excluir do DataGridView
@@ -148,6 +148,30 @@ namespace SistemaHotel
                 MessageBox.Show($"Erro ao excluir a linha: {ex.Message}");
             }
         }
+
+        private void butt_checkin_Click(object sender, EventArgs e)
+        {
+            if (DGV_hpds.SelectedRows.Count > 0)
+            {
+                // Obter os dados da linha selecionada
+                var row = DGV_hpds.SelectedRows[0];
+                var id = row.Cells["id_hospede"].Value?.ToString();
+                var nome = row.Cells["nome"].Value?.ToString();
+                
+
+                // Abrir o novo formulário com as informações
+                
+                FmCheckin checkin = new FmCheckin(nome);
+                checkin.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma linha no DataGridView.");
+            }
+
+
+
+        }
     }
-    }
+}
 

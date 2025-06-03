@@ -104,6 +104,7 @@
     <Compile Include="Controller_DAO\02_NewCad_DAO.cs" />
     <Compile Include="Controller_DAO\03_NewHospd.cs" />
     <Compile Include="Controller_DAO\04_Del_hspd.cs" />
+    <Compile Include="Controller_DAO\05_DelCheckin.cs" />
     <Compile Include="Model\Checkin.cs" />
     <Compile Include="Model\Hospede.cs" />
     <Compile Include="Model\Login01.cs" />
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="View\FmCadastroHodped.Designer.cs">
       <DependentUpon>FmCadastroHodped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FmCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FmCheckin.Designer.cs">
+      <DependentUpon>FmCheckin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FmGestaopagamentos.cs">
       <SubType>Form</SubType>
@@ -141,6 +148,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\FmCadastroHodped.resx">
       <DependentUpon>FmCadastroHodped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FmCheckin.resx">
+      <DependentUpon>FmCheckin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FmGestaopagamentos.resx">
       <DependentUpon>FmGestaopagamentos.cs</DependentUpon>

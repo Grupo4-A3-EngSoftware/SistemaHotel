@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using SistemaHotel.Conexão_BD;
+using SistemaHotel.Controller_DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,5 +80,60 @@ namespace SistemaHotel
                 MessageBox.Show("erro");
             }
         }
+
+        private void butt_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                ConnectionFactory factory = new ConnectionFactory();
+                if (dtacheckin.SelectedRows.Count > 0)
+                {
+                    // Obtém a linha selecionada
+                    var rowIndex = dtacheckin.SelectedRows[0].Index;
+
+                    // Obter o ID ou chave primária da linha selecionada e converte para string
+                    var id = dtacheckin.Rows[rowIndex].Cells["id_hospede"].Value?.ToString();
+
+                    if (id != null)
+                    {
+                        // Confirmar exclusão
+                        var confirmResult = MessageBox.Show(
+                            "Tem certeza que deseja excluir esta linha?",
+                            "Confirmação",
+                            MessageBoxButtons.YesNo
+                        );
+
+                        if (confirmResult == DialogResult.Yes)
+                        {
+                            // Excluir do banco de dados
+                            {
+                                _05_DelCheckin dell = new _05_DelCheckin();
+                                dell.Del_checkin(id);
+                            }
+
+                            // Excluir do DataGridView
+                            dtacheckin.Rows.RemoveAt(rowIndex);
+
+                            MessageBox.Show("Linha excluída com sucesso!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("ID não encontrado na linha selecionada.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecione uma linha para excluir.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir a linha: {ex.Message}");
+            }
+        }
     }
 }
+

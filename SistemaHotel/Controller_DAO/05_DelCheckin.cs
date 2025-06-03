@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace SistemaHotel.Controller_DAO
 {
-    public class _04_Del_hspd
+    internal class _05_DelCheckin
     {
         private MySqlConnection conexao;
 
-        public void Del_hspd(string id)
+        public void Del_checkin(string id)
         {
             try
             {
@@ -21,11 +21,11 @@ namespace SistemaHotel.Controller_DAO
                 conexao.Open();
 
                 // Preparando o comando SQL
-                using (MySqlCommand comandoSql = new MySqlCommand("DELETE FROM tbl_hospede WHERE id_hospede = @Id", conexao))
+                using (MySqlCommand comandoSql = new MySqlCommand("DELETE FROM tbl_checkin WHERE id_hospede = @Id", conexao))
                 {
                     // Substituindo os parâmetros
                     comandoSql.Parameters.AddWithValue("@Id", id);
-                    
+
                     // Executando o comando
                     comandoSql.ExecuteNonQuery();
                 }
@@ -44,13 +44,6 @@ namespace SistemaHotel.Controller_DAO
                 }
             }
         }
-
-
-
-
-
-
-
 
     }
 }

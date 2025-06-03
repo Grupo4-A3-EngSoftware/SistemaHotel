@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.buttListar = new System.Windows.Forms.Button();
             this.butt_del = new System.Windows.Forms.Button();
+            this.butt_checkin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hpds)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +82,7 @@
             this.txtendereco.Margin = new System.Windows.Forms.Padding(2);
             this.txtendereco.Multiline = true;
             this.txtendereco.Name = "txtendereco";
-            this.txtendereco.Size = new System.Drawing.Size(305, 89);
+            this.txtendereco.Size = new System.Drawing.Size(305, 20);
             this.txtendereco.TabIndex = 2;
             // 
             // panel1
@@ -196,12 +197,23 @@
             this.butt_del.UseVisualStyleBackColor = true;
             this.butt_del.Click += new System.EventHandler(this.butt_del_Click);
             // 
+            // butt_checkin
+            // 
+            this.butt_checkin.Location = new System.Drawing.Point(643, 406);
+            this.butt_checkin.Name = "butt_checkin";
+            this.butt_checkin.Size = new System.Drawing.Size(101, 28);
+            this.butt_checkin.TabIndex = 14;
+            this.butt_checkin.Text = "Fazer checkin";
+            this.butt_checkin.UseVisualStyleBackColor = true;
+            this.butt_checkin.Click += new System.EventHandler(this.butt_checkin_Click);
+            // 
             // FmCadastroHodped
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(866, 460);
+            this.Controls.Add(this.butt_checkin);
             this.Controls.Add(this.butt_del);
             this.Controls.Add(this.buttListar);
             this.Controls.Add(this.label5);
@@ -245,5 +257,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttListar;
         private System.Windows.Forms.Button butt_del;
+        private System.Windows.Forms.Button butt_checkin;
     }
 }
