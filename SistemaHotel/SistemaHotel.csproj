@@ -99,12 +99,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexão_BD\ConnectionFactory.cs" />
+    <Compile Include="Controller\CalPagamento.cs" />
     <Compile Include="Controller\CPFValidator.cs" />
     <Compile Include="Controller_DAO\01_Login_DAO.cs" />
     <Compile Include="Controller_DAO\02_NewCad_DAO.cs" />
     <Compile Include="Controller_DAO\03_NewHospd.cs" />
     <Compile Include="Controller_DAO\04_Del_hspd.cs" />
     <Compile Include="Controller_DAO\05_DelCheckin.cs" />
+    <Compile Include="Controller_DAO\06_EfetuarPagamento.cs" />
     <Compile Include="Model\Checkin.cs" />
     <Compile Include="Model\Hospede.cs" />
     <Compile Include="Model\Login01.cs" />

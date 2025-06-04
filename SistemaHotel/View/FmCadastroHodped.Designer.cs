@@ -118,7 +118,7 @@
             // 
             // btnnovo
             // 
-            this.btnnovo.Location = new System.Drawing.Point(149, 404);
+            this.btnnovo.Location = new System.Drawing.Point(174, 168);
             this.btnnovo.Margin = new System.Windows.Forms.Padding(2);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(77, 32);
@@ -147,7 +147,7 @@
             // 
             // btnsalvar
             // 
-            this.btnsalvar.Location = new System.Drawing.Point(269, 404);
+            this.btnsalvar.Location = new System.Drawing.Point(481, 168);
             this.btnsalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(79, 32);
@@ -179,7 +179,7 @@
             // 
             // buttListar
             // 
-            this.buttListar.Location = new System.Drawing.Point(402, 404);
+            this.buttListar.Location = new System.Drawing.Point(151, 404);
             this.buttListar.Name = "buttListar";
             this.buttListar.Size = new System.Drawing.Size(79, 32);
             this.buttListar.TabIndex = 12;
@@ -189,7 +189,7 @@
             // 
             // butt_del
             // 
-            this.butt_del.Location = new System.Drawing.Point(530, 406);
+            this.butt_del.Location = new System.Drawing.Point(326, 406);
             this.butt_del.Name = "butt_del";
             this.butt_del.Size = new System.Drawing.Size(74, 28);
             this.butt_del.TabIndex = 13;
@@ -199,7 +199,7 @@
             // 
             // butt_checkin
             // 
-            this.butt_checkin.Location = new System.Drawing.Point(643, 406);
+            this.butt_checkin.Location = new System.Drawing.Point(502, 406);
             this.butt_checkin.Name = "butt_checkin";
             this.butt_checkin.Size = new System.Drawing.Size(101, 28);
             this.butt_checkin.TabIndex = 14;

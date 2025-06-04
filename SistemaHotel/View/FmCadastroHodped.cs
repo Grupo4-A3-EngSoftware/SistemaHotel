@@ -26,7 +26,7 @@ namespace SistemaHotel
 
         private void btnnovo_Click(object sender, EventArgs e)
         {
-           
+
             // Limpa os campos de texto
             txtnomehospede.Text = "";
             txtendereco.Text = "";
@@ -35,7 +35,7 @@ namespace SistemaHotel
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
-            
+
             string nome = txtnomehospede.Text;
             string email = txtemail.Text;
             string endereço = txtendereco.Text;
@@ -94,10 +94,10 @@ namespace SistemaHotel
 
         private void butt_del_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                
+
 
                 ConnectionFactory factory = new ConnectionFactory();
                 if (DGV_hpds.SelectedRows.Count > 0)
@@ -120,11 +120,11 @@ namespace SistemaHotel
                         if (confirmResult == DialogResult.Yes)
                         {
                             // Excluir do banco de dados
-                            
-                                
-                            {   
+
+
+                            {
                                 _04_Del_hspd dell = new _04_Del_hspd();
-                                dell.Del_hspd(id);                                                       
+                                dell.Del_hspd(id);
                             }
 
                             // Excluir do DataGridView
@@ -151,26 +151,41 @@ namespace SistemaHotel
 
         private void butt_checkin_Click(object sender, EventArgs e)
         {
-            if (DGV_hpds.SelectedRows.Count > 0)
+            if (DGV_hpds.SelectedCells.Count > 0) // Certifica-se de que a linha seja válida
             {
-                // Obter os dados da linha selecionada
-                var row = DGV_hpds.SelectedRows[0];
-                var id = row.Cells["id_hospede"].Value?.ToString();
-                var nome = row.Cells["nome"].Value?.ToString();
-                
+                var selectedCell = DGV_hpds.SelectedCells[0];
+                var rowIndex = selectedCell.RowIndex; // Obter índice da linha selecionada
+                try
+                {
+                    // Obter os valores atualizados
+                    var row = DGV_hpds.Rows[rowIndex];
+                    var id = row.Cells["id_hospede"].Value?.ToString();
+                    
+                    // Atualizar o banco de dados
+                    if (!string.IsNullOrEmpty(id))
+                    {
+                        ConnectionFactory factory = new ConnectionFactory();
+                        using (MySqlConnection connection = factory.GetConnection())
+                        {
+                            connection.Open();
+                            string query = "INSERT INTO tbl_checkin (id_hospede) VALUES (@Id)"; 
 
-                // Abrir o novo formulário com as informações
-                
-                FmCheckin checkin = new FmCheckin(nome);
-                checkin.Show();
+                            using (MySqlCommand command = new MySqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@Id", id);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                        MessageBox.Show("tabela relacionada");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao fundir tabela: {ex.Message}");
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Por favor, selecione uma linha no DataGridView.");
-            }
-
-
-
         }
     }
 }
