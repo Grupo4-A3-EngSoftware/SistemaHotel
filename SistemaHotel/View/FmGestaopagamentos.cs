@@ -67,9 +67,9 @@ namespace SistemaHotel
                     valorquarto = 170; break;
                     case 3:
                     valorquarto = 400; break;
-            }    
-            
-            double valor = CalPagamento.CalcPagamento(dia, valorquarto);
+            }
+            var calPagamento = new CalPagamento();
+            double valor = calPagamento.CalcPagamento(dia, valorquarto);
             try
             {
                 ConnectionFactory factory = new ConnectionFactory();

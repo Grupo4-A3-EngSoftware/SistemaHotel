@@ -8,7 +8,7 @@ namespace SistemaHotel.Controller
 {
     public class CalPagamento
     {
-        public static double CalcPagamento(int dia,double valorQuarto)
+        public double CalcPagamento(int dia,double valorQuarto)
         {            
             return dia * valorQuarto;
         }
