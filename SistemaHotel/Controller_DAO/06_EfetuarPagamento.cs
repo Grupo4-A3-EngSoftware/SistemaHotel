@@ -13,7 +13,7 @@ namespace SistemaHotel.Controller_DAO
 {
     public class _06_EfetuarPagamento
     {
-        private MySqlConnection conexao;
+        
         public void EfetuarPagamento(string id, double ValorPago)
         {
             //atualiza a linha escolhida adicionando "VALORPAGO" á coluna "PAGAMENTO"

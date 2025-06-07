@@ -34,7 +34,7 @@ namespace SistemaHotel
                 using (MySqlConnection cn = factory.GetConnection())
                 {
                     cn.Open();
-                    MessageBox.Show("connectado");
+                    
 
                     var sqlquery = "SELECT c.id_checkin, c.pagamento, c.entrada, c.saida, c.quarto, h.nome, h.cpf, h.endereço, h.email FROM tbl_checkin c JOIN tbl_hospede h ON c.id_hospede = h.id_hospede;";
 
@@ -84,7 +84,7 @@ namespace SistemaHotel
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, selecione uma linha para excluir.");
+                    MessageBox.Show("Por favor, selecione uma linha.");
                 }
             }
             catch (Exception ex)

@@ -12,7 +12,7 @@ namespace SistemaHotel.Controller_DAO
     {
         private MySqlConnection conexao;
 
-        public void Del_hspd(string id)
+        public void Del_hspd(int id)
         {
             try
             {
@@ -44,13 +44,6 @@ namespace SistemaHotel.Controller_DAO
                 }
             }
         }
-
-
-
-
-
-
-
 
     }
 }

@@ -123,7 +123,7 @@
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(77, 32);
             this.btnnovo.TabIndex = 0;
-            this.btnnovo.Text = "Novo";
+            this.btnnovo.Text = "Limpar";
             this.btnnovo.UseVisualStyleBackColor = true;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 

@@ -118,12 +118,6 @@
     <Compile Include="View\FmCadastroHodped.Designer.cs">
       <DependentUpon>FmCadastroHodped.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FmCheckin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FmCheckin.Designer.cs">
-      <DependentUpon>FmCheckin.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FmGestaopagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,9 +146,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\FmCadastroHodped.resx">
       <DependentUpon>FmCadastroHodped.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FmCheckin.resx">
-      <DependentUpon>FmCheckin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FmGestaopagamentos.resx">
       <DependentUpon>FmGestaopagamentos.cs</DependentUpon>

@@ -62,8 +62,7 @@ namespace SistemaHotel
                 using (MySqlConnection cn = factory.GetConnection())
                 {
                     cn.Open();
-                    MessageBox.Show("connectado");
-
+                    
                     var sqlquery = "SELECT c.id_checkin, c.pagamento, c.entrada, c.saida, c.quarto, h.nome, h.cpf, h.endereço, h.email FROM tbl_checkin c JOIN tbl_hospede h ON c.id_hospede = h.id_hospede;";
 
                     using (MySqlDataAdapter da = new MySqlDataAdapter(sqlquery, cn))
@@ -169,11 +168,8 @@ namespace SistemaHotel
                         using (MySqlConnection connection = factory.GetConnection())
                         {
                             connection.Open();
-                            string query = $"UPDATE tbl_checkin SET {columnName} = @Value WHERE id_checkin = @Id";
-
-                            // Mensagens de depuração
-                            MessageBox.Show($"Conexão aberta? {connection.State == ConnectionState.Open}");
-                            MessageBox.Show($"ID: {id}, Column: {columnName}, Value: {formattedValue}");
+                            string query = $"UPDATE tbl_checkin SET {columnName} = @Value WHERE id_checkin = @Id";                                                   
+                           
 
                             using (MySqlCommand command = new MySqlCommand(query, connection))
                             {

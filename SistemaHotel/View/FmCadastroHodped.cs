@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using SistemaHotel.Conexão_BD;
 using SistemaHotel.Controller_DAO;
-using SistemaHotel.View;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,8 +67,7 @@ namespace SistemaHotel
                 using (MySqlConnection cn = factory.GetConnection())
                 {
                     cn.Open();
-                    MessageBox.Show("connectado");
-
+                    
                     var sqlquery = "select * from tbl_hospede;";
 
                     using (MySqlDataAdapter da = new MySqlDataAdapter(sqlquery, cn))
@@ -106,9 +105,9 @@ namespace SistemaHotel
                     var rowIndex = DGV_hpds.SelectedRows[0].Index;
 
                     // Obter o ID ou chave primária da linha selecionada e converte para string
-                    var id = DGV_hpds.Rows[rowIndex].Cells["id_hospede"].Value?.ToString();
+                    int id = Convert.ToInt32(DGV_hpds.Rows[rowIndex].Cells["id_hospede"].Value);
 
-                    if (id != null)
+                    if (id != 0)
                     {
                         // Confirmar exclusão
                         var confirmResult = MessageBox.Show(
