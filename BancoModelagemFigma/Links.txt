@@ -1,0 +1,5 @@
+https://github.com/Grupo4-A3-EngSoftware/SistemaHotel
+
+*ATENÇÃO: o projeto esta na branch main
+
+https://www.figma.com/design/A1Op3DNdXrugI989tsZ5kw/Sistema-Hotel?node-id=0-1&p=f&t=SAEOPqZqN7F3rtuz-0
